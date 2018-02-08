@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/contactstyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+
+      color: #777;
+
+      background: url("images/background9.png") no-repeat center center fixed;
+        background-size: cover;
+  }
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 300%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+    #example1 {
+        border: 0px solid black;
+        padding: 105px;
+        background: url(images/orphan1.jpg);
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="auphonpeopleApp.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li ><a href="#">Orphans</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<div class="contact-box fadeInDownBig">
+  <div class="contact-box-header group">
+
+    <!--<div class="contact-photo"></div>-->
+    <h2>Contact</h2>
+    <h3>Tell us what <em>you</em> think...</h3>
+   </div>
+  <form id="contact-form">
+    <div class="row group">
+      <div class="col2">
+        <label class="form-icon name-icon"></label>
+        <input type="text" placeholder="Name" name="name" id="name" required>
+      </div>
+      <div class="col2">
+        <label class="form-icon email-icon"></label>
+        <input type="email" placeholder="Email" name="email" id="email" required>
+      </div>
+    </div>
+    <div class="row group">
+      <div class="col1 last">
+        <label class="form-icon edit-icon"></label>
+        <textarea placeholder="Message" required name="message" id="message"></textarea>
+      </div>
+    </div>
+    <div class="contact-box-footer group">
+      <input type="submit" value="Send">
+    </div>
+  </form>
+</div>
+
+
+
+
+
+<script>
+(function ($) {
+  'use strict';
+  $(function () {
+    var contactBox = $('.contact-box');
+    contactBox.on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+      contactBox.removeClass('animated fadeOutDownBig');
+    });
+    $('.close').click(function(event) {
+      event.preventDefault();
+      contactBox.addClass('animated fadeOutDownBig');
+    });
+    $('#contact-form').validate({
+      errorElement: 'div',
+      messages: {
+        name: 'Please introduce yourself',
+        email: {
+          required: 'Please give us your email so we can reply',
+          email: 'It doesn\'t look like email address'
+        },
+        message: 'Please write something, don\'t be shy'
+      },
+      submitHandler: function(form) {
+      }
+    });
+  });
+})(jQuery);
+</script>
+
+</body>
+</html>

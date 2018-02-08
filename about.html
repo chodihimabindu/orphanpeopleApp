@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 300%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+    #example1 {
+        border: 0px solid black;
+        padding: 135px;
+        background: url(images/about3.jpg);
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+    #example2 {
+        border: 0px solid black;
+        padding: 175px;
+        background: url(images/about2.jpg);
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+
+
+
+
+    body {
+
+        color: #777;
+
+        background: url("images/background9.png") no-repeat center center fixed;
+          background-size: cover;
+    }
+    h3, h4 {
+        margin: 10px 0 30px 0;
+        letter-spacing: 10px;
+        font-size: 20px;
+        color: #111;
+    }
+    .container {
+        padding: 80px 120px;
+    }
+    .person {
+        border: 10px solid transparent;
+        margin-bottom: 25px;
+        width: 80%;
+        height: 80%;
+        opacity: 0.7;
+    }
+    .person:hover {
+        border-color: #f1f1f1;
+    }
+    .carousel-inner img {
+        -webkit-filter: grayscale(90%);
+        filter: grayscale(90%); /* make all photos black and white */
+        width: 100%; /* Set width to 100% */
+        margin: auto;
+    }
+    .carousel-caption h3 {
+        color: #fff !important;
+    }
+    @media (max-width: 600px) {
+      .carousel-caption{
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+      }
+    }
+    .bg-1 {
+        background: #2d2d30;
+        color: #bdbdbd;
+    }
+    .bg-1 h3 {color: #fff;}
+    .bg-1 p {font-style: italic;}
+    .list-group-item:first-child {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    .list-group-item:last-child {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .thumbnail {
+        padding: 0 0 15px 0;
+        border: none;
+        border-radius: 0;
+    }
+    .thumbnail p {
+        margin-top: 15px;
+        color: #555;
+    }
+    .btn {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #f1f1f1;
+        border-radius: 0;
+        transition: .2s;
+    }
+    .btn:hover, .btn:focus {
+        border: 1px solid #333;
+        background-color: #fff;
+        color: #000;
+    }
+    .modal-header, h4, .close {
+        background-color: #333;
+        color: #fff !important;
+        text-align: center;
+
+    }
+    .modal-header, .modal-body {
+        padding: 40px 50px;
+    }
+    .nav-tabs li a {
+        color: #777;
+  }
+    .navbar {
+        font-family: Montserrat, sans-serif;
+        margin-bottom: 0;
+        background-color: #2d2d30;
+        border: 0;
+        font-size: 11px !important;
+        letter-spacing: 4px;
+        opacity: 0.9;8
+    }
+    .navbar li a, .navbar .navbar-brand {
+        color: #d5d5d5 !important;
+    }
+    .navbar-nav li a:hover {
+        color: #fff !important;
+    }
+    .navbar-nav li.active a {
+        color: #fff !important;
+        background-color: #29292c !important;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+    }
+    .open .dropdown-toggle {
+        color: #fff;
+        background-color: #555 !important;
+    }
+    .dropdown-menu li a {
+        color: #000 !important;
+    }
+    .dropdown-menu li a:hover {
+        background-color: red !important;
+    }
+    footer {
+        background-color: #2d2d30;
+        color: #f5f5f5;
+        padding: 32px;
+    }
+    footer a {
+        color: #f5f5f5;
+    }
+    footer a:hover {
+        color: #777;
+        text-decoration: none;
+    }
+    .form-control {
+        border-radius: 0;
+    }
+    textarea {
+        resize: none;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="auphonpeopleApp.html">Home</a></li>
+        <li class="active"><a href="about.html">About</a></li>
+        <li><a href="#">Orphans</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav"> </br>
+      <p><a href="https://www.manupandgo.org/get-involved/destinations-and-trip-schedule/ethiopia-mission-trip-2016/?gclid=EAIaIQobChMI4tKTl7uE2QIVjhiPCh18IQQlEAAYAyAAEgLwY_D_BwE">Choose Path</a></p> </br>
+      <p><a href="https://www.miraclefoundation.org/lp-ppc-facts-about-orphans-newsletter-signup/">Donation</a></p> </br>
+      <p><a href="https://www.miraclefoundation.org/lp-ppc-facts-about-orphans-newsletter-signup/">Facts</a></p> </br>
+    </div>
+
+
+
+    <div class="col-sm-8 text-left"></br>
+      <h1>About Orphans</h1> </br>
+      <p>Various groups use different definitions to identify orphans. ... In this approach, a maternal orphan is a child whose mother has died, a paternal
+        orphan is a child whose father has died, and a double orphan is a child who has lost both parents.</p>
+      <hr>
+      <h3>OUR INDIAN ORPHANAGE</h3>
+
+      <h2>In the heart of every child is a hunger for home. Not just for food and a place to sleep, but for safety and community. Most importantly: for love. At the Good Shepherd Agricultural Mission, 350kms east
+        of Delhi in the town of Banbasa, we are much more than a home for unwanted Indian orphans.</h2>
+
+      <p>We are a family, where God’s love guides us all as we grow and expand year after year. Not just an Indian orphanage, we are a nearly self-sustaining organization;
+         a working farm, a vibrant school, receiving no government assistance of any kind.</p>
+
+
+      <h1 id="example1">Orphans</h1>
+
+    <center> <button class="btn" data-toggle="modal" data-target="#myModal">Donate</button> </center>
+      <h1 id="example2">Orphans</h1>
+
+
+
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <button class="btn" data-toggle="modal" data-target="#myModal1">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">�</button>
+        <h4><span class="glyphicon glyphicon-lock"></span> Donations</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="psw"><span  class="glyphicon glyphicon-user"></span>Name</label>
+            <input type="text" class="form-control" id="psw" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label for="usrname"><span   class="glyphicon glyphicon-shopping-cart" ></span>Enter Money</label>
+            <input type="number" class="form-control" id="usrname" placeholder="Enter Money">
+          </div>
+            <button type="submit" class="btn btn-block">Donate
+              <span class="glyphicon glyphicon-ok"></span>
+            </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Cancel
+        </button>
+        <p>Need <a href="#">help?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="myModal1" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">close</button>
+        <h4> Subscribe Us</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="psw"><span  class="glyphicon glyphicon-user"></span>Enter Email</label>
+            <input type="email" class="form-control" id="psw" placeholder="Enter Email ID">
+          </div>
+
+            <button type="submit" class="btn btn-block">Submit
+            </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<footer class="container-fluid text-center">
+  <a href="www.hcl.com"><p>www.hcl.com</p></a>
+</footer>
+
+</body>
+</html>
